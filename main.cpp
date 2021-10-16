@@ -1,5 +1,6 @@
 #include <iostream>
 #include "unindent.h"
+#include "indent.h"
 
 int main(){
   std::cout << "Testing unindent:" << "\n";

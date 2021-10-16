@@ -8,9 +8,11 @@ This program contains the unindent function.
 
 #include <iostream>
 #include <cctype>
+#include "unindent.h"
 
 std::string removeLeadingSpaces(std::string line){
   std::string s = "";
+
   for(int i = 0; i < line.length(); i++){
     if(!isspace(line[i])){
 	s += line[i];
