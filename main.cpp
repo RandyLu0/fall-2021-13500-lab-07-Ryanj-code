@@ -1,3 +1,11 @@
+/*
+Author: Ryan Jiang
+Course: CSCI-135
+Instructor: Tong Yi and Mike Zamansky
+Assignment: Lab 7
+This program contains the tests for the unindent and indent functions.
+*/
+
 #include <iostream>
 #include <fstream>
 #include "unindent.h"
