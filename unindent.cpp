@@ -12,10 +12,17 @@ This program contains the unindent function.
 
 std::string removeLeadingSpaces(std::string line){
   std::string s = "";
-
+  bool check = false;
+  
   for(int i = 0; i < line.length(); i++){
     if(!isspace(line[i])){
-	s += line[i];
+	check = true;
+    }
+
+    if(check){
+      s += line.substr(i);
+      s += "\n";
+      break;
     }
   }
 

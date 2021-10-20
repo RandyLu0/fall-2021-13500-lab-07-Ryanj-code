@@ -1,4 +1,5 @@
 #pragma once
 #include <iostream>
 
-int countChar(string line, char c);
+int countChar(std::string line, char c);
+std::string indent(std::string line);
