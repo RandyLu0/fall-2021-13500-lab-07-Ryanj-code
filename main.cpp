@@ -39,15 +39,7 @@ int main(){
 
   fin.close();
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
+    
   std::cout << "Bad Code 2:" << "\n";
 
   std::ifstream fin2("bad-code2.cpp");
@@ -77,7 +69,7 @@ int main(){
   
   std::string unindent2;
   while(getline(fin2, line2)) {
-    unindent = removeLeadingSpaces(line2);
+    unindent2 = removeLeadingSpaces(line2);
     std::cout << indent(unindent2) << "\n";
   }
 
