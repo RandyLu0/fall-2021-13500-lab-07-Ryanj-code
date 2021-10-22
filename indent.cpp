@@ -25,8 +25,16 @@ int countChar(std::string line, char c){
 int tabs = 0;
 
 std::string indent(std::string line){
-  std::string s = "";
+  if(tabs < 0){
+    tabs = 0;
+  }
   
+  std::string s = "";
+
+  if(line[0] == '}'){
+    tabs--;
+  } // Decrement tabs by 1 if a closed bracket is in the line.
+
   for(int i = 0; i < tabs; i++){
     s += "\t";
   } // Adds tabs number of \t before the line.
@@ -36,13 +44,8 @@ std::string indent(std::string line){
   if(countChar(line, '{') > 0){
     tabs++;
   } // Increment tabs by 1 if an open bracket is in the line. 
-
-  if(countChar(line, '}') > 0){
-    tabs--;
-  } // Decrement tabs by 1 if a closed bracket is in the line.
   
   return s;
 } // Return s.
-
 
 
