@@ -27,7 +27,7 @@ int tabs = 0;
 std::string indent(std::string line){
   if(tabs < 0){
     tabs = 0;
-  }
+  } // Sets tabs to 0 if it is negative.
   
   std::string s = "";
 
