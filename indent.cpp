@@ -22,24 +22,24 @@ int countChar(std::string line, char c){
   return count;
 } // Return count.
 
-int count = 0;
+int tabs = 0;
 
 std::string indent(std::string line){
   std::string s = "";
   
-  for(int i = 0; i < count; i++){
+  for(int i = 0; i < tabs; i++){
     s += "\t";
-  } // Adds count number of \t before the line.
+  } // Adds tabs number of \t before the line.
 
   s += line;
   // Adds the line to s;
   if(countChar(line, '{') > 0){
-    count++;
-  } // Increment count by 1 if an open bracket is in the line. 
+    tabs++;
+  } // Increment tabs by 1 if an open bracket is in the line. 
 
   if(countChar(line, '}') > 0){
-    count--;
-  } // Decrement count by 1 if a closed bracket is in the line.
+    tabs--;
+  } // Decrement tabs by 1 if a closed bracket is in the line.
   
   return s;
 } // Return s.
